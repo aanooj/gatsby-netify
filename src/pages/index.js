@@ -1,13 +1,13 @@
-import React from "react";
-import Button from '../components/Button';
-import PrimaryButton from '../components/PrimaryButton';
-
+import React from "react"
+import Layout from "../components/layout"
 export default () => (
-  <div style={{ color: `purple` }}>
-    <h1>Hello Gatsby!</h1>
-    <p>What a world.</p>
-    <a href="/about">Click here</a>
-    <Button/>
-    <PrimaryButton/>
-  </div>
-);
+  <Layout>
+    <h1>Amazing Pandas Eating Things</h1>
+    <div>
+      <img
+        src="https://2.bp.blogspot.com/-BMP2l6Hwvp4/TiAxeGx4CTI/AAAAAAAAD_M/XlC_mY3SoEw/s1600/panda-group-eating-bamboo.jpg"
+        alt="Group of pandas eating bamboo"
+      />
+    </div>
+  </Layout>
+)

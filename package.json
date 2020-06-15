@@ -14,11 +14,22 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.28",
     "gatsby": "^2.22.15",
+    "gatsby-plugin-emotion": "^4.3.4",
+    "gatsby-plugin-typography": "^2.5.4",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-typography": "^0.16.19",
+    "typography": "^0.16.19",
+    "typography-theme-fairy-gates": "^0.16.19",
+    "typography-theme-kirkham": "^0.16.19"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
+    "eslint": "^7.2.0",
+    "eslint-plugin-react": "^7.20.0",
     "prettier": "2.0.5"
   },
   "repository": {
