@@ -16,7 +16,20 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: 'carbon',
+              theme: 'vscode',
+            }
+          },
+        ],
+      },
+    },
     'gatsby-plugin-emotion',
     {
       resolve: `gatsby-plugin-typography`,

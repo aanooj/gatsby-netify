@@ -14,14 +14,26 @@ export default function Home({ data }) {
             border-bottom: 1px solid;
           `}
         >
-          Amazing Pandas Eating Things
+          Technology blogs
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        <div css={css `
+          display: flex;
+          justify-content:flex-start;
+          flex-wrap: wrap;
+        `}>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
+          <div key={node.id} css={css `
+              display: flex;
+              flex-grow:1;
+            `}>
+            <img css={css`
+              width:200px;
+            `} src={node.frontmatter.banner} ></img>
             <Link
               to={node.fields.slug}
               css={css`
+                margin-left:10px;
                 text-decoration: none;
                 color: inherit;
               `}
@@ -42,8 +54,10 @@ export default function Home({ data }) {
               </h3>
               <p>{node.excerpt}</p>
             </Link>
+            
           </div>
         ))}
+        </div>
       </div>
     </Layout>
   )
@@ -59,11 +73,14 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            tags
+            category
+            banner
           }
           fields {
             slug
           }
-          excerpt
+          excerpt(pruneLength: 500)
         }
       }
     }

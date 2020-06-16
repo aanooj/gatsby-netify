@@ -1,37 +1,23 @@
-import React from "react";
-import { css } from "@emotion/core";
-import { Link } from "gatsby";
+import React from "react"
+import { css } from "@emotion/core"
+import { Link } from "gatsby"
+import Header from './header';
+import Footer from './footer';
 
-import { rhythm } from "../utils/typography";
+import { rhythm } from "../utils/typography"
 
-export default ({ children }) => (
+export default ({ children }) => ( 
   <div
     css={css`
+      background-color: #fff;
       margin: 0 auto;
       max-width: 1024px;
       padding: ${rhythm(2)};
       padding-top: ${rhythm(1.5)};
     `}
   >
-    <Link to={`/`}>
-      <h3
-        css={css`
-          margin-bottom: ${rhythm(2)};
-          display: inline-block;
-          font-style: normal;
-        `}
-      >
-        Pandas Eating Lots
-      </h3>
-    </Link>
-    <Link
-      to={`/about/`}
-      css={css`
-        float: right;
-      `}
-    >
-      About
-    </Link>
+    <Header/>
     {children}
+    <Footer/>
   </div>
-);
+)
